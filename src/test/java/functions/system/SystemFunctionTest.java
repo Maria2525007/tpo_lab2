@@ -38,8 +38,34 @@ class SystemFunctionTest {
     }
 
     @Test
-    void testBoundaryValue() {
+    void testBoundaryValuePositive() {
         double result = system.calculate(0.5, eps);
         assertFalse(Double.isNaN(result), "NaN for boundary x=0.5");
+    }
+
+    @Test
+    void testBoundaryZeroThrows() {
+        assertThrows(ArithmeticException.class,
+                () -> system.calculate(0, eps));
+    }
+
+    @Test
+    void testEquivalenceClassNegative() {
+        double result = system.calculate(-1, eps);
+        assertFalse(Double.isNaN(result));
+        assertTrue(Double.isFinite(result));
+    }
+
+    @Test
+    void testEquivalenceClassPositive() {
+        double result = system.calculate(2, eps);
+        assertFalse(Double.isNaN(result));
+        assertTrue(Double.isFinite(result));
+    }
+
+    @Test
+    void testTrigPartReturnsNaNWhenCosZero() {
+        double result = system.calculate(-Math.PI / 2, eps);
+        assertTrue(Double.isNaN(result));
     }
 }

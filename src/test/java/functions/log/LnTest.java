@@ -48,4 +48,10 @@ class LnTest {
         assertThrows(IllegalArgumentException.class,
                 () -> ln.calculate(-1, eps));
     }
+
+    @Test
+    void testZeroThrows() {
+        assertThrows(IllegalArgumentException.class,
+                () -> ln.calculate(0, eps));
+    }
 }

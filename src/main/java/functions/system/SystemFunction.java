@@ -40,7 +40,7 @@ public class SystemFunction implements MathFunction {
             double cosX = cos.calculate(x, eps);
             double cscX = csc.calculate(x, eps);
 
-            if (cosX == 0 || cscX == 0) {
+            if (Math.abs(cosX) < eps || Math.abs(cscX) < eps) {
                 return Double.NaN;
             }
 

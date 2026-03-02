@@ -14,18 +14,16 @@ public class CsvExporter {
             double eps,
             String fileName) throws IOException {
 
-        FileWriter writer = new FileWriter(fileName);
-        writer.write("x,result\n");
-
-        for (double x = start; x <= end; x += step) {
-            try {
-                double value = function.calculate(x, eps);
-                writer.write(x + "," + value + "\n");
-            } catch (Exception e) {
-                writer.write(x + ",undefined\n");
+        try (FileWriter writer = new FileWriter(fileName)) {
+            writer.write("x,result\n");
+            for (double x = start; x <= end; x += step) {
+                try {
+                    double value = function.calculate(x, eps);
+                    writer.write(x + "," + value + "\n");
+                } catch (Exception e) {
+                    writer.write(x + ",undefined\n");
+                }
             }
         }
-
-        writer.close();
     }
 }
