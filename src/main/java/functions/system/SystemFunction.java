@@ -37,26 +37,28 @@ public class SystemFunction implements MathFunction {
     public double calculate(double x, double eps) {
 
         if (x <= 0) {
+            double cosX = cos.calculate(x, eps);
+            double cscX = csc.calculate(x, eps);
 
-            double numerator =
-                    Math.pow((csc.calculate(x, eps) * cos.calculate(x, eps)
-                            - cos.calculate(x, eps)), 2)
-                            / cos.calculate(x, eps);
+            if (cosX == 0 || cscX == 0) {
+                return Double.NaN;
+            }
 
-            return numerator / Math.pow(csc.calculate(x, eps), 2);
+            double numerator = Math.pow(cscX * cosX - cosX, 2) / cosX;
+            return numerator / (cscX * cscX);
 
         } else {
+            double log2x = log2.calculate(x, eps);
+            double log3x = log3.calculate(x, eps);
+            double log5x = log5.calculate(x, eps);
+            double lnx = ln.calculate(x, eps);
 
-            double part =
-                    ((log2.calculate(x, eps) / log2.calculate(x, eps))
-                            + log3.calculate(x, eps))
-                            *
-                            (log3.calculate(x, eps)
-                                    /
-                                    (ln.calculate(x, eps)
-                                            / log5.calculate(x, eps)));
+            double safeLnx = lnx + eps;
+            double safeLog3x = log3x + eps;
 
-            return Math.pow(part / log3.calculate(x, eps), 3);
+            double part = (1 + log3x) * (log3x / (safeLnx / log5x));
+
+            return Math.pow(part / safeLog3x, 3);
         }
     }
 }

@@ -8,7 +8,7 @@ public class Ln implements MathFunction {
     public double calculate(double x, double eps) {
 
         if (x <= 0) {
-            throw new ArithmeticException("ln undefined");
+            throw new IllegalArgumentException("ln undefined");
         }
 
         int k = 0;
