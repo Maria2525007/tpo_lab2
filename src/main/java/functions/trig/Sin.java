@@ -7,6 +7,8 @@ public class Sin implements MathFunction {
     @Override
     public double calculate(double x, double eps) {
 
+        x = x % (2 * Math.PI);
+
         double term = x;
         double result = 0;
         int n = 1;
