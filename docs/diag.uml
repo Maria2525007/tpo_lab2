@@ -3,73 +3,217 @@
   <ID>JAVA</ID>
   <OriginalElement>/Users/makhmudovama/Documents/ITMO/3_course/TPO/tpo_lab2/src/main/java/functions</OriginalElement>
   <nodes>
-    <node x="-42.5" y="45.0">functions.log.LogBase</node>
-    <node x="346.0" y="-3.0">functions.trig.Sin</node>
-    <node x="-88.0" y="146.0">functions.log.Log2</node>
-    <node x="296.5" y="45.0">functions.log.Ln</node>
-    <node x="197.5" y="-104.0">functions.MathFunction</node>
-    <node x="31.0" y="-51.0">functions.system.SystemFunction</node>
-    <node x="90.5" y="98.0">functions.log.Log3</node>
-    <node x="-28.5" y="98.0">functions.log.Log5</node>
-    <node x="206.0" y="146.0">functions.Main</node>
-    <node x="31.0" y="146.0">functions.util.CsvExporter</node>
-    <node x="235.0" y="-3.0">functions.trig.Cos</node>
-    <node x="180.0" y="45.0">functions.trig.Csc</node>
+    <node x="368.25" y="349.0">functions.Main</node>
+    <node x="220.25" y="175.0">functions.log.Log5</node>
+    <node x="220.25" y="43.0">functions.log.LogBase</node>
+    <node x="518.25" y="175.0">functions.trig.Csc</node>
+    <node x="301.75" y="96.0">functions.log.Log3</node>
+    <node x="339.25" y="301.0">functions.util.CsvExporter</node>
+    <node x="339.25" y="175.0">functions.log.Log2</node>
+    <node x="168.0" y="-10.0">functions.log.Ln</node>
+    <node x="369.25" y="248.0">functions.system.SystemFunction</node>
+    <node x="559.75" y="43.0">functions.trig.Sin</node>
+    <node x="375.25" y="-63.0">functions.MathFunction</node>
+    <node x="628.25" y="175.0">functions.trig.Cos</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="functions.trig.Sin" target="functions.MathFunction" relationship="REALIZATION">
-      <point x="0.0" y="-14.0" />
-      <point x="383.0" y="-61.0" />
-      <point x="275.5" y="-61.0" />
-      <point x="0.0" y="14.0" />
+    <edge source="functions.trig.Csc" target="functions.trig.Sin" relationship="TO_ONE">
+      <point x="20.0" y="-14.0" />
+      <point x="-18.5" y="14.0" />
     </edge>
     <edge source="functions.trig.Cos" target="functions.MathFunction" relationship="REALIZATION">
-      <point x="0.0" y="-14.0" />
+      <point x="20.25" y="-14.0" />
+      <point x="689.0" y="120.0" />
+      <point x="483.25" y="120.0" />
+      <point x="483.25" y="-20.0" />
+      <point x="453.25" y="-20.0" />
       <point x="0.0" y="14.0" />
     </edge>
-    <edge source="functions.log.Log2" target="functions.log.LogBase" relationship="GENERALIZATION">
+    <edge source="functions.Main" target="functions.log.Log2" relationship="CREATE">
       <point x="0.0" y="-14.0" />
-      <point x="-43.5" y="88.0" />
-      <point x="16.0" y="88.0" />
-      <point x="0.0" y="14.0" />
+      <point x="411.75" y="339.0" />
+      <point x="282.75" y="339.0" />
+      <point x="282.75" y="238.0" />
+      <point x="361.5" y="238.0" />
+      <point x="-22.25" y="14.0" />
+    </edge>
+    <edge source="functions.Main" target="functions.log.Log3" relationship="CREATE">
+      <point x="0.0" y="-14.0" />
+      <point x="411.75" y="339.0" />
+      <point x="324.25" y="339.0" />
+      <point x="-22.5" y="14.0" />
+    </edge>
+    <edge source="functions.Main" target="functions.log.Log5" relationship="CREATE">
+      <point x="0.0" y="-14.0" />
+      <point x="411.75" y="339.0" />
+      <point x="303.75" y="339.0" />
+      <point x="303.75" y="228.0" />
+      <point x="242.5" y="228.0" />
+      <point x="-22.25" y="14.0" />
     </edge>
     <edge source="functions.log.LogBase" target="functions.MathFunction" relationship="REALIZATION">
-      <point x="0.0" y="-14.0" />
-      <point x="16.0" y="-61.0" />
-      <point x="275.5" y="-61.0" />
+      <point x="29.25" y="-14.0" />
+      <point x="308.0" y="-20.0" />
+      <point x="453.25" y="-20.0" />
       <point x="0.0" y="14.0" />
     </edge>
-    <edge source="functions.system.SystemFunction" target="functions.MathFunction" relationship="REALIZATION">
-      <point x="0.0" y="-14.0" />
-      <point x="118.0" y="-61.0" />
-      <point x="275.5" y="-61.0" />
-      <point x="0.0" y="14.0" />
+    <edge source="functions.log.LogBase" target="functions.log.Ln" relationship="TO_ONE">
+      <point x="-29.25" y="-14.0" />
+      <point x="249.5" y="33.0" />
+      <point x="219.75" y="33.0" />
+      <point x="17.25" y="14.0" />
+    </edge>
+    <edge source="functions.system.SystemFunction" target="functions.log.Log5" relationship="TO_ONE">
+      <point x="43.5" y="-14.0" />
+      <point x="499.75" y="218.0" />
+      <point x="287.0" y="218.0" />
+      <point x="22.25" y="14.0" />
     </edge>
     <edge source="functions.log.Ln" target="functions.MathFunction" relationship="REALIZATION">
       <point x="0.0" y="-14.0" />
-      <point x="331.0" y="-61.0" />
-      <point x="275.5" y="-61.0" />
+      <point x="202.5" y="-20.0" />
+      <point x="453.25" y="-20.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="functions.system.SystemFunction" target="functions.log.Log3" relationship="TO_ONE">
+      <point x="43.5" y="-14.0" />
+      <point x="499.75" y="218.0" />
+      <point x="483.25" y="218.0" />
+      <point x="483.25" y="140.0" />
+      <point x="369.25" y="140.0" />
+      <point x="22.5" y="14.0" />
+    </edge>
+    <edge source="functions.Main" target="functions.trig.Sin" relationship="CREATE">
+      <point x="0.0" y="-14.0" />
+      <point x="411.75" y="339.0" />
+      <point x="765.75" y="339.0" />
+      <point x="765.75" y="100.0" />
+      <point x="615.25" y="100.0" />
+      <point x="18.5" y="14.0" />
+    </edge>
+    <edge source="functions.system.SystemFunction" target="functions.log.Log2" relationship="TO_ONE">
+      <point x="43.5" y="-14.0" />
+      <point x="499.75" y="218.0" />
+      <point x="406.0" y="218.0" />
+      <point x="22.25" y="14.0" />
+    </edge>
+    <edge source="functions.system.SystemFunction" target="functions.trig.Csc" relationship="TO_ONE">
+      <point x="43.5" y="-14.0" />
+      <point x="499.75" y="218.0" />
+      <point x="503.25" y="218.0" />
+      <point x="503.25" y="160.0" />
+      <point x="578.25" y="160.0" />
+      <point x="20.0" y="-14.0" />
+    </edge>
+    <edge source="functions.trig.Sin" target="functions.MathFunction" relationship="REALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="596.75" y="-20.0" />
+      <point x="453.25" y="-20.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="functions.Main" target="functions.trig.Csc" relationship="CREATE">
+      <point x="0.0" y="-14.0" />
+      <point x="411.75" y="339.0" />
+      <point x="558.25" y="339.0" />
       <point x="0.0" y="14.0" />
     </edge>
     <edge source="functions.log.Log5" target="functions.log.LogBase" relationship="GENERALIZATION">
       <point x="0.0" y="-14.0" />
+      <point x="264.75" y="165.0" />
+      <point x="266.75" y="165.0" />
+      <point x="266.75" y="86.0" />
+      <point x="278.75" y="86.0" />
       <point x="0.0" y="14.0" />
     </edge>
     <edge source="functions.log.Log3" target="functions.log.LogBase" relationship="GENERALIZATION">
       <point x="0.0" y="-14.0" />
-      <point x="135.5" y="88.0" />
-      <point x="16.0" y="88.0" />
+      <point x="346.75" y="86.0" />
+      <point x="278.75" y="86.0" />
       <point x="0.0" y="14.0" />
     </edge>
-    <edge source="functions.trig.Csc" target="functions.MathFunction" relationship="REALIZATION">
+    <edge source="functions.system.SystemFunction" target="functions.trig.Cos" relationship="TO_ONE">
+      <point x="43.5" y="-14.0" />
+      <point x="499.75" y="218.0" />
+      <point x="724.25" y="218.0" />
+      <point x="724.25" y="160.0" />
+      <point x="648.5" y="160.0" />
+      <point x="-20.25" y="-14.0" />
+    </edge>
+    <edge source="functions.Main" target="functions.log.Ln" relationship="CREATE">
       <point x="0.0" y="-14.0" />
-      <point x="220.0" y="-61.0" />
-      <point x="275.5" y="-61.0" />
+      <point x="411.75" y="339.0" />
+      <point x="185.25" y="339.0" />
+      <point x="-17.25" y="14.0" />
+    </edge>
+    <edge source="functions.system.SystemFunction" target="functions.log.Ln" relationship="TO_ONE">
+      <point x="43.5" y="-14.0" />
+      <point x="499.75" y="218.0" />
+      <point x="205.25" y="218.0" />
+      <point x="205.25" y="33.0" />
+      <point x="219.75" y="33.0" />
+      <point x="17.25" y="14.0" />
+    </edge>
+    <edge source="functions.log.Log2" target="functions.log.LogBase" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="383.75" y="165.0" />
+      <point x="286.75" y="165.0" />
+      <point x="286.75" y="86.0" />
+      <point x="278.75" y="86.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="functions.system.SystemFunction" target="functions.trig.Sin" relationship="TO_ONE">
+      <point x="43.5" y="-14.0" />
+      <point x="499.75" y="218.0" />
+      <point x="463.25" y="218.0" />
+      <point x="463.25" y="150.0" />
+      <point x="558.25" y="150.0" />
+      <point x="558.25" y="100.0" />
+      <point x="578.25" y="100.0" />
+      <point x="-18.5" y="14.0" />
+    </edge>
+    <edge source="functions.trig.Cos" target="functions.trig.Sin" relationship="TO_ONE">
+      <point x="-20.25" y="-14.0" />
+      <point x="648.5" y="150.0" />
+      <point x="598.25" y="150.0" />
+      <point x="598.25" y="100.0" />
+      <point x="578.25" y="100.0" />
+      <point x="-18.5" y="14.0" />
+    </edge>
+    <edge source="functions.trig.Csc" target="functions.MathFunction" relationship="REALIZATION">
+      <point x="-20.0" y="-14.0" />
+      <point x="538.25" y="130.0" />
+      <point x="463.25" y="130.0" />
+      <point x="463.25" y="-20.0" />
+      <point x="453.25" y="-20.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="functions.system.SystemFunction" target="functions.MathFunction" relationship="REALIZATION">
+      <point x="-43.5" y="-14.0" />
+      <point x="412.75" y="238.0" />
+      <point x="443.25" y="238.0" />
+      <point x="443.25" y="-20.0" />
+      <point x="453.25" y="-20.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="functions.Main" target="functions.system.SystemFunction" relationship="CREATE">
+      <point x="0.0" y="-14.0" />
+      <point x="411.75" y="339.0" />
+      <point x="499.25" y="339.0" />
+      <point x="499.25" y="291.0" />
+      <point x="456.25" y="291.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="functions.Main" target="functions.trig.Cos" relationship="CREATE">
+      <point x="0.0" y="-14.0" />
+      <point x="411.75" y="339.0" />
+      <point x="745.25" y="339.0" />
+      <point x="745.25" y="252.0" />
+      <point x="668.75" y="252.0" />
       <point x="0.0" y="14.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Compact" zoom="1.1405896480907793" showDependencies="false" x="249.71669006347656" y="66.30980936686197" />
+  <settings layout="Hierarchic Compact" zoom="1.0719589989640697" showDependencies="true" x="555.9297332763673" y="227.1622924804688" />
   <SelectedNodes />
   <Categories />
   <SCOPE>All</SCOPE>
