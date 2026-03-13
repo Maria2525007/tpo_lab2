@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>/Users/makhmudovama/Documents/ITMO/3_course/TPO/tpo_lab2/src/main/java/functions</OriginalElement>
+  <nodes>
+    <node x="-42.5" y="45.0">functions.log.LogBase</node>
+    <node x="346.0" y="-3.0">functions.trig.Sin</node>
+    <node x="-88.0" y="146.0">functions.log.Log2</node>
+    <node x="296.5" y="45.0">functions.log.Ln</node>
+    <node x="197.5" y="-104.0">functions.MathFunction</node>
+    <node x="31.0" y="-51.0">functions.system.SystemFunction</node>
+    <node x="90.5" y="98.0">functions.log.Log3</node>
+    <node x="-28.5" y="98.0">functions.log.Log5</node>
+    <node x="206.0" y="146.0">functions.Main</node>
+    <node x="31.0" y="146.0">functions.util.CsvExporter</node>
+    <node x="235.0" y="-3.0">functions.trig.Cos</node>
+    <node x="180.0" y="45.0">functions.trig.Csc</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="functions.trig.Sin" target="functions.MathFunction" relationship="REALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="383.0" y="-61.0" />
+      <point x="275.5" y="-61.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="functions.trig.Cos" target="functions.MathFunction" relationship="REALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="functions.log.Log2" target="functions.log.LogBase" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="-43.5" y="88.0" />
+      <point x="16.0" y="88.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="functions.log.LogBase" target="functions.MathFunction" relationship="REALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="16.0" y="-61.0" />
+      <point x="275.5" y="-61.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="functions.system.SystemFunction" target="functions.MathFunction" relationship="REALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="118.0" y="-61.0" />
+      <point x="275.5" y="-61.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="functions.log.Ln" target="functions.MathFunction" relationship="REALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="331.0" y="-61.0" />
+      <point x="275.5" y="-61.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="functions.log.Log5" target="functions.log.LogBase" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="functions.log.Log3" target="functions.log.LogBase" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="135.5" y="88.0" />
+      <point x="16.0" y="88.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="functions.trig.Csc" target="functions.MathFunction" relationship="REALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="220.0" y="-61.0" />
+      <point x="275.5" y="-61.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="1.1405896480907793" showDependencies="false" x="249.71669006347656" y="66.30980936686197" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
