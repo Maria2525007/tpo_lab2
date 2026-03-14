@@ -4,6 +4,8 @@ import functions.log.*;
 import functions.trig.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Nested;
+import org.mockito.Mockito;
+
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 import static org.mockito.ArgumentMatchers.*;
@@ -179,7 +181,35 @@ class SystemFunctionTest {
                 assertFalse(Double.isNaN(result), "NaN for x=" + x);
             }
         }
+
+        @Test
+        void checkBranch() {
+            Cos cosStub = mock(Cos.class);
+            Csc cscStub = mock(Csc.class);
+            Ln lnStub = mock(Ln.class);
+            Log2 log2Stub = mock(Log2.class);
+            Log3 log3Stub = mock(Log3.class);
+            Log5 log5Stub = mock(Log5.class);
+
+            when(cosStub.calculate(anyDouble(), anyDouble())).thenReturn(0.5);
+            when(log3Stub.calculate(anyDouble(), anyDouble())).thenReturn(1.0);
+
+            SystemFunction sys = new SystemFunction(
+                    mock(Sin.class), cosStub, cscStub, lnStub, log2Stub, log3Stub, log5Stub);
+
+            sys.calculate(-1, eps);
+            verify(cosStub).calculate(eq(-1.0), anyDouble());
+            verify(log3Stub, never()).calculate(anyDouble(), anyDouble());
+
+            Mockito.clearInvocations(cosStub, log3Stub);
+
+            sys.calculate(2, eps);
+            verify(log3Stub).calculate(eq(2.0), anyDouble());
+            verify(cosStub, never()).calculate(anyDouble(), anyDouble());
+        }
     }
+
+
 
     @Nested
     class FullIntegrationTest {
